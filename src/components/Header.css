@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0E5989;
+  color: white;
+  z-index: 1001;
+  box-shadow: none;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-logo {
+  flex: 1;
+  text-align: center;
+  margin: 0 16px;
+}
+
+.header-logo h1 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notification-button,
+.profile-button {
+  position: relative;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.notification-button:hover,
+.profile-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* iPhone SE (375px) */
+@media (min-width: 375px) {
+  .header-content {
+    padding: 14px 20px;
+  }
+  
+  .header-logo h1 {
+    font-size: 17px;
+  }
+}
+
+/* iPhone 12/13/14 (390px) */
+@media (min-width: 390px) {
+  .header-content {
+    padding: 16px 24px;
+  }
+  
+  .header-logo h1 {
+    font-size: 18px;
+  }
+}
+
+/* iPhone 12/13/14 Pro Max (428px) */
+@media (min-width: 428px) {
+  .header-content {
+    padding: 18px 28px;
+  }
+  
+  .header-logo h1 {
+    font-size: 19px;
+  }
+}
+
+/* iPad ve büyük ekranlar - iPhone boyutunda sabit */
+@media (min-width: 768px) {
+  .header {
+    max-width: 428px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .header-content {
+    max-width: 428px;
+    padding: 18px 28px;
+  }
+  
+  .header-logo h1 {
+    font-size: 19px;
+  }
+}

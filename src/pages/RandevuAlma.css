@@ -1,0 +1,178 @@
+.ajandam-page {
+  padding: 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.calendar-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.month-year {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.calendar-grid {
+  padding: 20px;
+}
+
+.day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.day-name {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  padding: 8px 0;
+}
+
+.day-name.weekend {
+  color: #dc3545;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.calendar-day:hover {
+  background-color: #f8f9fa;
+}
+
+.calendar-day.other-month {
+  color: #adb5bd;
+}
+
+.calendar-day.weekend {
+  color: #dc3545;
+}
+
+.calendar-day.other-month.weekend {
+  color: #f8d7da;
+}
+
+.calendar-day.today {
+  background-color: #ff6b35;
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-day.today:hover {
+  background-color: #e55a2b;
+}
+
+/* iPhone responsive adjustments */
+@media (max-width: 375px) {
+  .ajandam-page {
+    padding: 16px;
+  }
+  
+  .calendar-header {
+    padding: 16px;
+  }
+  
+  .month-year {
+    font-size: 18px;
+  }
+  
+  .calendar-grid {
+    padding: 16px;
+  }
+  
+  .day-name {
+    font-size: 13px;
+  }
+  
+  .calendar-day {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 390px) {
+  .ajandam-page {
+    padding: 18px;
+  }
+  
+  .calendar-header {
+    padding: 18px;
+  }
+  
+  .calendar-grid {
+    padding: 18px;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 428px) {
+  .ajandam-page {
+    padding: 20px;
+  }
+  
+  .calendar-header {
+    padding: 20px;
+  }
+  
+  .calendar-grid {
+    padding: 20px;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .ajandam-page {
+    max-width: 428px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+}
