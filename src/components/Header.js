@@ -20,6 +20,8 @@ const Header = ({ onMenuToggle }) => {
         return 'Ajandam';
       case '/hesabim':
         return 'Uyap Bilgilerim';
+      case '/bildirimlerim':
+        return 'Bildirimlerim';
       default:
         return 'Vatandaş Mobil Bilgi Sistemi';
     }

@@ -9,6 +9,7 @@ import DavaTakip from './pages/DavaTakip';
 import BelgeYukleme from './pages/BelgeYukleme';
 import RandevuAlma from './pages/RandevuAlma';
 import Hesabim from './pages/Hesabim';
+import Bildirimlerim from './pages/Bildirimlerim';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/belge-yukleme" element={<BelgeYukleme />} />
                 <Route path="/randevu-alma" element={<RandevuAlma />} />
                 <Route path="/hesabim" element={<Hesabim />} />
+                <Route path="/bildirimlerim" element={<Bildirimlerim />} />
               </Routes>
             </div>
           </main>

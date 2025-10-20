@@ -29,7 +29,7 @@ const Navigation = ({ isOpen, onClose }) => {
     { path: '/dava-takip', icon: Building, label: 'Danıştay Dosya Sorgulama' },
     { path: '/randevu-alma', icon: Briefcase, label: 'Duruşmalarım' },
     { path: '/randevu-alma', icon: Calendar, label: 'Ajandam' },
-    { path: '/hesabim', icon: Bell, label: 'Bildirimlerim' },
+    { path: '/bildirimlerim', icon: Bell, label: 'Bildirimlerim' },
     { path: '/hesabim', icon: Settings, label: 'Bildirim Ayarları' },
     { path: '/hesabim', icon: CreditCard, label: 'Bilgilerim' }
   ];

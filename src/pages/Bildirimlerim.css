@@ -1,0 +1,49 @@
+.bildirimlerim-page {
+  padding: 0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-notifications {
+  text-align: center;
+  color: #6c757d;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 40px 20px;
+}
+
+/* iPhone responsive adjustments */
+@media (max-width: 375px) {
+  .bildirimlerim-page {
+    padding: 0;
+  }
+  
+  .empty-notifications {
+    font-size: 15px;
+    padding: 30px 16px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 390px) {
+  .empty-notifications {
+    padding: 35px 18px;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 428px) {
+  .empty-notifications {
+    padding: 40px 20px;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .bildirimlerim-page {
+    max-width: 428px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+}

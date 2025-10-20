@@ -63,7 +63,7 @@ const Home = () => {
       title: 'Bildirimlerim',
       description: 'Bildirimlerinizi kontrol edin',
       icon: BellIcon,
-      path: '/hesabim',
+      path: '/bildirimlerim',
       color: '#059669',
       strokeWidth: 2
     },
