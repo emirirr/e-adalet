@@ -1,47 +1,150 @@
-.bildirimler-page {
+.bilgilerim-page {
   padding: 0;
   background-color: #ffffff;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.empty-notifications {
-  text-align: center;
-  color: #6c757d;
+.bilgilerim-content {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 100px; /* Alt navigasyon için boşluk */
+}
+
+.info-section {
+  margin-bottom: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+}
+
+.info-section:last-child {
+  border-bottom: none;
+}
+
+.info-label {
   font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: normal;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0 8px 0;
+  z-index: 1000;
+}
+
+.bottom-navigation .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bottom-navigation .nav-item.active {
+  color: #1976d2;
+}
+
+.bottom-navigation .nav-item:not(.active) {
+  color: #9e9e9e;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bilgilerim-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231976d2'%3E%3Cpath d='M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+}
+
+.iletisim-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bdbdbd' stroke-width='2'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E");
+}
+
+.bottom-navigation .nav-item.active .bilgilerim-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231976d2'%3E%3Cpath d='M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+}
+
+.bottom-navigation .nav-item.active .iletisim-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231976d2' stroke-width='2'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E");
+}
+
+.bottom-navigation .nav-item span {
+  font-size: 12px;
   font-weight: 500;
-  padding: 40px 20px;
+  text-align: center;
 }
 
 /* iPhone responsive adjustments */
 @media (max-width: 375px) {
-  .bildirimler-page {
-    padding: 0;
+  .bilgilerim-content {
+    padding: 16px;
+    padding-bottom: 100px;
   }
   
-  .empty-notifications {
+  .info-section {
+    padding: 16px 0;
+  }
+  
+  .info-label {
     font-size: 15px;
-    padding: 30px 16px;
+  }
+  
+  .info-value {
+    font-size: 15px;
   }
 }
 
 @media (min-width: 376px) and (max-width: 390px) {
-  .empty-notifications {
-    padding: 35px 18px;
+  .bilgilerim-content {
+    padding: 18px;
+    padding-bottom: 100px;
+  }
+  
+  .info-section {
+    padding: 18px 0;
   }
 }
 
 @media (min-width: 391px) and (max-width: 428px) {
-  .empty-notifications {
-    padding: 40px 20px;
+  .bilgilerim-content {
+    padding: 20px;
+    padding-bottom: 100px;
+  }
+  
+  .info-section {
+    padding: 20px 0;
   }
 }
 
 /* Desktop view */
 @media (min-width: 768px) {
-  .bildirimler-page {
+  .bilgilerim-page {
     max-width: 428px;
     margin: 0 auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);

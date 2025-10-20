@@ -2,6 +2,53 @@
   padding: 16px 0;
 }
 
+.welcome-section {
+  padding: 0 16px 20px 16px;
+}
+
+.welcome-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.welcome-card .user-avatar {
+  width: 60px;
+  height: 60px;
+  background: #0E5989;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.welcome-content h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #1f2937;
+}
+
+.welcome-content .user-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #0E5989;
+  text-transform: uppercase;
+}
+
+.welcome-content .user-tc {
+  font-size: 14px;
+  margin: 0;
+  color: #6b7280;
+}
+
 .quick-actions {
   margin-bottom: 0;
 }

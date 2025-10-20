@@ -19,7 +19,7 @@ const Header = ({ onMenuToggle }) => {
       case '/randevu-alma':
         return 'Ajandam';
       case '/hesabim':
-        return 'Bildirimlerim';
+        return 'Uyap Bilgilerim';
       default:
         return 'Vatandaş Mobil Bilgi Sistemi';
     }

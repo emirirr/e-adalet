@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useUser } from '../contexts/UserContext';
 import { 
   FileText, 
   Upload, 
@@ -26,6 +27,7 @@ import {
 import './Home.css';
 
 const Home = () => {
+  const user = useUser();
   const quickActions = [
     {
       title: 'Dosya Sorgulama',
@@ -136,6 +138,19 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      <div className="welcome-section">
+        <div className="welcome-card">
+          <div className="user-avatar">
+            <User size={32} />
+          </div>
+          <div className="welcome-content">
+            <h2>Hoş Geldiniz</h2>
+            <p className="user-name">{user.adSoyad}</p>
+            <p className="user-tc">T.C. Kimlik No: {user.tcKimlikNo}</p>
+          </div>
+        </div>
+      </div>
+
       <div className="quick-actions">
         <div className="actions-grid">
           {quickActions.map((action, index) => {

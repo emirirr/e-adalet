@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useUser } from '../contexts/UserContext';
 import { 
   Home, 
   FileText, 
@@ -20,6 +21,7 @@ import './Navigation.css';
 
 const Navigation = ({ isOpen, onClose }) => {
   const location = useLocation();
+  const user = useUser();
 
   const menuItems = [
     { path: '/', icon: Home, label: 'Ana Sayfa' },
@@ -50,7 +52,7 @@ const Navigation = ({ isOpen, onClose }) => {
               <User size={32} />
             </div>
             <div className="user-details">
-              <h3>İSMAİL EMİR TİRYAKİ</h3>
+              <h3>{user.adSoyad}</h3>
               <p>e-Adalet Vatandaş</p>
             </div>
           </div>
